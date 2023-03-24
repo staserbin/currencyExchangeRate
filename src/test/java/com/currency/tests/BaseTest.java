@@ -6,9 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import static com.currency.utils.Constants.BASE_URL;
+import java.util.logging.Logger;
 
 public class BaseTest {
+
+    public static final Logger LOGGER = Logger.getLogger("com.api.jar");
+
 //    WebDriver driver;
 //    CurrencyEndpoint currencyEndpoint;
 //

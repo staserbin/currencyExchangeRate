@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 import java.io.IOException;
 
-import static com.currency.config.ConfigurationManager.getUrl;
+import static com.currency.config.ConfigurationManager.getAPIUrl;
 import static io.restassured.RestAssured.given;
 
 public class CurrencyEndpoint extends BaseEndpoint{
@@ -17,7 +17,7 @@ public class CurrencyEndpoint extends BaseEndpoint{
     public Response getCurrency() throws IOException {
         Response response = given()
                 .contentType(ContentType.JSON)
-                .baseUri(getUrl())
+                .baseUri(getAPIUrl())
                 .when()
                 .get("/pubinfo?exchange&coursid=5")
                 .then()
