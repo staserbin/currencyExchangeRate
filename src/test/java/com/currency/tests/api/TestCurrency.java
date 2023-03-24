@@ -2,7 +2,6 @@ package com.currency.tests.api;
 
 import com.currency.api.CurrencyEndpoint;
 import com.currency.pojo.CashExchange;
-import com.currency.tests.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
@@ -15,7 +14,7 @@ import java.util.List;
 import static com.currency.utils.Constants.*;
 import static org.testng.Assert.assertEquals;
 
-public class TestCurrency extends BaseTest {
+public class TestCurrency extends APIBaseTest {
 
     private static final String EXTRA_URL = "/pubinfo?exchange&coursid=5";
 
