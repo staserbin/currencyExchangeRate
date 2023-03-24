@@ -3,19 +3,21 @@ package com.currency.api;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-import static com.currency.utils.Constants.BASE_URL;
+import java.io.IOException;
+
+import static com.currency.config.ConfigurationManager.getUrl;
 import static io.restassured.RestAssured.given;
 
 public class CurrencyEndpoint extends BaseEndpoint{
 
-    public CurrencyEndpoint(String baseUrl, String extraURL) {
-        super(baseUrl, extraURL);
+    public CurrencyEndpoint(String extraURL) {
+        super(extraURL);
     }
 
-    public Response getCurrency() {
+    public Response getCurrency() throws IOException {
         Response response = given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URL)
+                .baseUri(getUrl())
                 .when()
                 .get("/pubinfo?exchange&coursid=5")
                 .then()

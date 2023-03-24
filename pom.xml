@@ -21,7 +21,6 @@
         <selenium.version>4.8.1</selenium.version>
         <gson.version>2.10.1</gson.version>
         <jackson.version>2.14.2</jackson.version>
-        <owner.version>1.0.12</owner.version>
     </properties>
 
     <dependencies>
@@ -62,12 +61,6 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.aeonbits.owner</groupId>
-            <artifactId>owner</artifactId>
-            <version>${owner.version}</version>
         </dependency>
 
     </dependencies>
