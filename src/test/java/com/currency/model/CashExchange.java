@@ -1,11 +1,11 @@
-package com.currency.pojo;
+package com.currency.model;
 
 public class CashExchange {
 
-    String ccy;
-    String base_ccy;
-    String buy;
-    String sale;
+    private String ccy;
+    private String base_ccy;
+    private String buy;
+    private String sale;
 
     public String getCcy() {
         return ccy;

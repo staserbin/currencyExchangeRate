@@ -3,7 +3,7 @@ package com.currency.api;
 public class BaseEndpoint {
     private String extraUrl;
 
-    public BaseEndpoint(String extraUrl) {
+    public BaseEndpoint() {
         this.extraUrl = extraUrl;
     }
 
