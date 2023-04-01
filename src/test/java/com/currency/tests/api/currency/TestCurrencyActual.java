@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 import static com.currency.utils.Constants.*;
+import static com.currency.utils.Logger.LOGGER;
 import static org.testng.Assert.*;
 import static org.assertj.core.api.Assertions.*;
 

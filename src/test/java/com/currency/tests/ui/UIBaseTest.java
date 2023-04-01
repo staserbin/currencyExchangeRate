@@ -9,8 +9,6 @@ import java.util.logging.Logger;
 
 public class UIBaseTest {
 
-    public static final Logger LOGGER = Logger.getLogger("com.api.jar");
-
     WebDriver driver;
 
     @BeforeMethod

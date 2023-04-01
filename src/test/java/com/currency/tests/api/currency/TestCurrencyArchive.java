@@ -15,6 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import static com.currency.utils.Constants.USD;
+import static com.currency.utils.Logger.LOGGER;
 import static org.assertj.core.api.Assertions.*;
 import static org.testng.Assert.assertEquals;
 
