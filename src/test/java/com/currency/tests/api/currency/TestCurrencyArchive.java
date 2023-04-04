@@ -43,5 +43,4 @@ public class TestCurrencyArchive extends APIBaseTest {
         assertThat(ratesList.stream().filter(s -> s.getCurrency().equals(USD)).findFirst().get()
                 .getSaleRate()).isNotNull();
     }
-
 }
