@@ -1,8 +1,6 @@
 package com.currency.tests.api.currency;
 
-import com.currency.api.CurrencyEndpoint;
 import com.currency.model.CashExchange;
-import com.currency.tests.api.APIBaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
@@ -23,7 +21,6 @@ public class TestCurrencyActual extends APIBaseTest {
     @Test
     public void testCurrencyActual() throws IOException {
         LOGGER.info("GET actual currencies");
-        CurrencyEndpoint currencyEndpoint = new CurrencyEndpoint();
         Response response = currencyEndpoint.getCurrency(EXTRA_URL);
         assertEquals(200, response.statusCode());
 

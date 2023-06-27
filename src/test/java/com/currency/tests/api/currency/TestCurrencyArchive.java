@@ -1,9 +1,7 @@
 package com.currency.tests.api.currency;
 
-import com.currency.api.CurrencyEndpoint;
 import com.currency.model.ArchiveCashExchange;
 import com.currency.model.ArchiveExchangeInfo;
-import com.currency.tests.api.APIBaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
@@ -28,7 +26,6 @@ public class TestCurrencyArchive extends APIBaseTest {
         LOGGER.info("GET actual currencies");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         LocalDateTime currentDate = LocalDateTime.now();
-        CurrencyEndpoint currencyEndpoint = new CurrencyEndpoint();
         Response response = currencyEndpoint.getCurrency(EXTRA_URL.concat(formatter.format(currentDate)));
         assertEquals(200, response.statusCode());
 
